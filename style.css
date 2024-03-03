@@ -118,3 +118,27 @@
   margin: 10px;
   min-height: 5vh;
 }
+
+@media(max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "nav nav nav nav nav"
+      "nav nav nav nav nav"
+      "body body body body body"
+      "body body body body body"
+      "body body body body body"
+      "body body body body body"
+      "body body body body body"
+      "body body body body body"
+      "body body body body body"
+      "sidebar sidebar sidebar sidebar sidebar"
+      "sidebar sidebar sidebar sidebar sidebar"
+      "footer footer footer footer footer"
+    ;
+  }
+
+  #sidebar {
+    border-left: 10px solid black;
+  }
+
+}
