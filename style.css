@@ -40,7 +40,6 @@
 .caja-nav-superior {
   background-color: tomato;
   flex: 1;
-  max-height: 2;
   border-top: 10px solid darkslategrey;
   border-left: 10px solid darkslategrey;
   border-bottom: 10px solid darkslategrey;
@@ -70,7 +69,6 @@
   background-color: gray;
   border: 10px solid black;
   grid-area: body;
-  text-align: center;
   display: flex;
 }
 
@@ -80,14 +78,12 @@
   border-top: 10px solid black;
   border-right: 10px solid black;
   border-bottom: 10px solid black;
-  text-align: center;
 }
 
 #footer {
   background-color: yellow;
   border: 10px solid black;
   grid-area: footer;
-  text-align: center;
 }
 
 .articles {
@@ -139,6 +135,27 @@
 
   #sidebar {
     border-left: 10px solid black;
+  }
+
+}
+
+
+@media(max-width: 575px) {
+  .article {
+    min-width: 90%;
+  }
+
+  .caja-nav-superior--grande {
+    flex: 1;
+  }
+
+  .caja-nav-superior {
+    border: 10px solid darkslategrey;
+  }
+
+  #nav-superior {
+    flex-direction: column;
+    min-height: 20vh;
   }
 
 }
