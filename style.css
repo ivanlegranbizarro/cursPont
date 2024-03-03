@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  max-width: 1200px;
+  min-height: 100vh;
+  display: grid;
+  row-gap: 10px;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "nav nav nav nav nav"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "body body body sidebar sidebar"
+    "footer footer footer footer footer"
+  ;
+}
+
+#nav {
+  border: 10px solid black;
+  grid-area: nav;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-superior {
+  flex: 1;
+  display: flex;
+}
+
+.caja-nav-superior {
+  background-color: tomato;
+  flex: 1;
+  max-height: 2;
+  border-top: 10px solid darkslategrey;
+  border-left: 10px solid darkslategrey;
+  border-bottom: 10px solid darkslategrey;
+}
+
+.caja-nav-superior--grande {
+  flex: 3;
+}
+
+#nav-superior>:last-child {
+  border-right: 10px solid darkslategrey;
+}
+
+#nav-inferior {
+  flex: 1;
+  display: flex;
+}
+
+.caja-inferior {
+  background-color: yellow;
+  flex: 1;
+  border: 10px solid darkorange;
+}
+
+
+#body {
+  background-color: gray;
+  border: 10px solid black;
+  grid-area: body;
+  text-align: center;
+  display: flex;
+}
+
+#sidebar {
+  background-color: crimson;
+  grid-area: sidebar;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  text-align: center;
+}
+
+#footer {
+  background-color: yellow;
+  border: 10px solid black;
+  grid-area: footer;
+  text-align: center;
+}
+
+.articles {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article {
+  background-color: mediumblue;
+  flex: 1;
+  min-width: 40%;
+  margin: 10px;
+}
+
+.article:last-child {
+  background-color: skyblue;
+}
+
+.side-articles {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.side-article {
+  background-color: yellow;
+  margin: 10px;
+  min-height: 5vh;
+}
