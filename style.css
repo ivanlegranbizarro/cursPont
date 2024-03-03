@@ -28,39 +28,26 @@
   border: 10px solid black;
   grid-area: nav;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-#nav-superior {
-  flex: 1;
-  display: flex;
 }
 
 .caja-nav-superior {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   background-color: tomato;
-  flex: 1;
-  border-top: 10px solid darkslategrey;
-  border-left: 10px solid darkslategrey;
-  border-bottom: 10px solid darkslategrey;
+  border: 10px solid darkslategrey;
 }
 
 .caja-nav-superior--grande {
-  flex: 3;
 }
 
-#nav-superior>:last-child {
-  border-right: 10px solid darkslategrey;
+.caja-nav-superior--pequeña {
 }
 
-#nav-inferior {
-  flex: 1;
-  display: flex;
-}
+
+#nav-inferior {}
 
 .caja-inferior {
   background-color: yellow;
-  flex: 1;
   border: 10px solid darkorange;
 }
 
@@ -69,7 +56,6 @@
   background-color: gray;
   border: 10px solid black;
   grid-area: body;
-  display: flex;
 }
 
 #sidebar {
@@ -78,6 +64,7 @@
   border-top: 10px solid black;
   border-right: 10px solid black;
   border-bottom: 10px solid black;
+  text-align: center;
 }
 
 #footer {
@@ -86,76 +73,18 @@
   grid-area: footer;
 }
 
-.articles {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-}
+.articles {}
 
 .article {
-  background-color: mediumblue;
-  flex: 1;
-  min-width: 40%;
-  margin: 10px;
+  background-color: midnightblue;
 }
 
 .article:last-child {
   background-color: skyblue;
 }
 
-.side-articles {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
+.side-articles {}
 
 .side-article {
   background-color: yellow;
-  margin: 10px;
-  min-height: 5vh;
-}
-
-@media(max-width: 768px) {
-  .contenedor {
-    grid-template-areas:
-      "nav nav nav nav nav"
-      "nav nav nav nav nav"
-      "body body body body body"
-      "body body body body body"
-      "body body body body body"
-      "body body body body body"
-      "body body body body body"
-      "body body body body body"
-      "body body body body body"
-      "sidebar sidebar sidebar sidebar sidebar"
-      "sidebar sidebar sidebar sidebar sidebar"
-      "footer footer footer footer footer"
-    ;
-  }
-
-  #sidebar {
-    border-left: 10px solid black;
-  }
-
-}
-
-
-@media(max-width: 575px) {
-  .article {
-    min-width: 90%;
-  }
-
-  .caja-nav-superior--grande {
-    flex: 1;
-  }
-
-  .caja-nav-superior {
-    border: 10px solid darkslategrey;
-  }
-
-  #nav-superior {
-    flex-direction: column;
-    min-height: 20vh;
-  }
-
 }
